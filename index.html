@@ -1,787 +1,586 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en" data-theme="dark">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Phan Thuy Phuong | Projects & Career</title>
-    <meta
-        content="Projects and career of Phan Thuy Phuong, an AI student and software engineer focused on web and machine learning projects."
-        name="description">
-    <meta content="Phan Thuy Phuong, software engineer, AI student, projects, career, certificates" name="keywords">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phan Thuy Phuong | Portfolio</title>
+  <meta name="description"
+    content="Projects and career of Phan Thuy Phuong, an AI student and software engineer focused on web and machine learning projects." />
+  <meta name="keywords" content="Phan Thuy Phuong, software engineer, AI student, projects, career, certificates" />
+  <meta property="og:title" content="Phan Thuy Phuong | Portfolio" />
+  <meta property="og:description" content="AI Engineer & Software Developer based in Vietnam." />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="icon" href="assets/images/logo.ico" type="image/jpeg" />
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="index-page">
+<body>
 
-    <!-- Sidebar Navigation (from MyResume style, with MinimalFolio colors) -->
-    <header id="sidebar" class="sidebar-nav d-flex flex-column justify-content-center">
-        <i class="sidebar-toggle d-xl-none bi bi-list"></i>
-        <nav id="sidebar-menu" class="sidebar-menu">
-            <ul>
-                <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-                <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-                <li><a href="#skills"><i class="bi bi-gear navicon"></i><span>Skills</span></a></li>
-                <li><a href="#career"><i class="bi bi-file-earmark-text navicon"></i><span>Career</span></a></li>
-                <li><a href="#projects"><i class="bi bi-images navicon"></i><span>Projects</span></a></li>
-                <li><a href="#certificates"><i class="bi bi-award navicon"></i><span>Certificates</span></a></li>
-                <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="header-name" onclick="goTo('hero'); return false;"
+        style="text-decoration: none; color: inherit;">Phuong</a>
+
+      <nav class="header-nav">
+        <button class="nav-link" data-section="about" onclick="goTo('about')">About</button>
+        <button class="nav-link" data-section="education" onclick="goTo('education')">Background</button>
+        <button class="nav-link" data-section="skills" onclick="goTo('skills')">Skills</button>
+        <button class="nav-link" data-section="experience" onclick="goTo('experience')">Experience</button>
+        <button class="nav-link" data-section="projects" onclick="goTo('projects')">Projects</button>
+        <button class="nav-link" data-section="contact" onclick="goTo('contact')">Contact</button>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+        <svg id="themeIcon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+        <span id="themeLabel">Light mode</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- 01 Hero -->
+    <section id="hero">
+      <div class="hero-layout">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            <span>AI Student @ UIT</span>
+          </div>
+          <h1 class="hero-name">Phan Thuy Phuong</h1>
+          <p class="hero-desc">AI Engineer &amp; Software Developer
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="goTo('projects')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="6" height="6" rx="1" />
+                <rect x="16" y="3" width="6" height="6" rx="1" />
+                <rect x="9" y="3" width="6" height="6" rx="1" />
+                <rect x="2" y="11" width="6" height="10" rx="1" />
+                <rect x="9" y="11" width="13" height="10" rx="1" />
+              </svg>
+              View My Projects
+            </button>
+            <button class="btn-ghost" onclick="goTo('contact')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+              Get in Touch
+            </button>
+          </div>
+        </div>
+        <div class="hero-visual" id="hero-neural-container">
+          <!-- 3D Neural Network Canvas -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 About -->
+    <section id="about" class="fade-up">
+      <div class="section-label">01 &mdash; About</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <h3 class="about-headline">Bridging AI and Software Engineering to build practical, scalable solutions</h3>
+          <p>I am an Artificial Intelligence student at the University of Information Technology, deeply passionate
+            about translating complex technical challenges into efficient, user-centric applications.</p>
+          <p>My background spans full-stack web development, machine learning algorithms, and cloud infrastructure. I
+            thrive in collaborative environments where I can leverage my technical versatility to deliver immediate
+            impact, while continuously pushing the boundaries of my knowledge.</p>
+          <p>Whether it's designing robust APIs, optimizing data pipelines, or integrating intelligent features, I am
+            dedicated to writing clean, maintainable code that adds tangible business value.</p>
+          <a href="assets/docs/resume.pdf" class="btn-primary" style="width:fit-content; margin-top:1.2rem;"
+            target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download Resume
+          </a>
+        </div>
+        <div>
+          <div class="about-card">
+            <div
+              style="margin-bottom: var(--space-md); display: flex; align-items: center; justify-content: space-between;">
+              <span class="skill-level metallic-badge" style="display: inline-flex; align-items: center; gap: 0.3rem;">
+                <span class="hero-badge-dot"></span>
+                Remote-friendly
+              </span>
+            </div>
+            <div class="about-info-item">
+              <div class="about-info-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <div class="about-info-label">Location</div>
+                <div class="about-info-value">Ho Chi Minh City, Vietnam</div>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <div class="about-info-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </div>
+              <div>
+                <div class="about-info-label">Email</div>
+                <div class="about-info-value"><a href="mailto:ph2o.phuong@gmail.com">ph2o.phuong@gmail.com</a></div>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <div class="about-info-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </div>
+              <div>
+                <div class="about-info-label">LinkedIn</div>
+                <div class="about-info-value"><a href="https://linkedin.com/in/aquamarine3236" target="_blank"
+                    rel="noopener">aquamarine3236</a></div>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <div class="about-info-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </div>
+              <div>
+                <div class="about-info-label">GitHub</div>
+                <div class="about-info-value"><a href="https://github.com/aquamarine3236" target="_blank"
+                    rel="noopener">aquamarine3236</a></div>
+              </div>
+            </div>
+            <blockquote class="about-quote">
+              "Building practical solutions through code while continuously learning and growing."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Education (Background) -->
+    <section id="education" class="fade-up">
+      <div class="section-label">02 &mdash; Background</div>
+      <h2 class="section-title">Education</h2>
+
+      <div class="timeline">
+        <div class="timeline-item" style="padding-bottom: var(--space-xl);">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023 – Present</div>
+          <div class="timeline-title">University of Information Technology (UIT)</div>
+          <div class="timeline-subtitle">Bachelor of Artificial Intelligence</div>
+          <div class="timeline-content">
+            <ul class="exp-bullets">
+              <li><b>AI Engineering:</b> Machine Learning, Deep Learning, NLP, and Computer Vision.</li>
+              <li><b>Software Engineering:</b> Architecture, Databases, Web Frameworks, and Application Development.
+              </li>
             </ul>
-        </nav>
-    </header>
-
-    <main class="main">
-
-        <!-- Hero Section (MinimalFolio style) -->
-        <section id="hero" class="hero section">
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row align-items-center gx-5 gy-5">
-                    <div class="col-lg-7">
-                        <div class="intro" data-aos="fade-right" data-aos-delay="150">
-                            <div class="eyebrow d-inline-flex align-items-center gap-2 mb-3">
-                                <span class="dot"></span>
-                                <span class="text">AI Engineer & Software Developer</span>
-                            </div>
-
-                            <h1 class="display-heading mb-3">
-                                Phan Thuy Phuong
-                            </h1>
-
-                            <p class="lead mb-4">
-                                An Artificial Intelligence student with a passion for coding, problem-solving, and
-                                exploring new technologies. I enjoy working on software projects and continuously
-                                improving my skills.
-                            </p>
-
-                            <div class="cta-group d-flex flex-wrap align-items-center gap-3" data-aos="zoom-in"
-                                data-aos-delay="250">
-                                <a href="#projects" class="btn btn-ghost">
-                                    View My Projects
-                                    <i class="bi bi-arrow-right ms-2"></i>
-                                </a>
-                                <a href="#contact" class="link-underline">
-                                    Get Contact
-                                    <i class="bi bi-arrow-right ms-2"></i>
-                                </a>
-                            </div>
-
-                            <div class="meta mt-4 d-flex flex-wrap align-items-center gap-4" data-aos="fade-up"
-                                data-aos-delay="300">
-                                <div class="meta-item d-flex align-items-center gap-2">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <span>Vietnam</span>
-                                </div>
-                                <div class="meta-item d-flex align-items-center gap-2">
-                                    <i class="bi bi-circle"></i>
-                                    <span>Open to opportunities</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5">
-                        <figure class="portrait-wrap position-relative" data-aos="fade-left" data-aos-delay="200">
-                            <img src="assets/images/profile/profile-pic.png" alt="Profile Portrait"
-                                class="img-fluid portrait-img">
-                            <figcaption class="visually-hidden">Phan Thuy Phuong portrait</figcaption>
-
-                            <div class="badge note" data-aos="zoom-in" data-aos-delay="300">
-                                <i class="bi bi-star"></i>
-                                <span>AI Student @ UIT</span>
-                            </div>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </section><!-- /Hero Section -->
-
-        <!-- About Section (MinimalFolio style with Portfolio content) -->
-        <section id="about" class="about section light-background">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>About</h2>
-                <p>Artificial Intelligence major who loves building usable software, learning fast, and collaborating on
-                    real projects.</p>
-            </div>
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row align-items-center justify-content-between intro-wrap gy-5">
-                    <div class="col-lg-7" data-aos="fade-right" data-aos-delay="150">
-                        <div class="intro-content">
-                            <span class="eyebrow">Hello there</span>
-                            <h2 class="headline">I'm a calm-minded creative developer crafting meaningful digital
-                                solutions</h2>
-                            <p class="lead">
-                                I enjoy coding, problem-solving, and exploring new technologies while studying
-                                Artificial Intelligence at the University of Information Technology.
-                            </p>
-                            <p>
-                                I'm eager to gain experience, collaborate with others, and contribute to innovative tech
-                                solutions while continuously improving my skills in AI, web development, and cloud
-                                technologies.
-                            </p>
-
-                            <div class="cta-group">
-                                <a href="assets/docs/resume.pdf" class="btn-ghost" target="_blank">
-                                    Download Resume <i class="bi bi-download"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="250">
-                        <figure class="profile-figure text-center text-lg-end">
-                            <img src="assets/images/profile/about-pic.png" alt="Portrait of Phan Thuy Phuong"
-                                class="img-fluid profile-photo">
-                        </figure>
-                    </div>
-                </div>
-
-                <!-- Info Grid -->
-                <div class="skills-wrap">
-                    <div class="row g-4">
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="120">
-                            <div class="skill-item">
-                                <i class="bi bi-geo-alt"></i>
-                                <h3>Location</h3>
-                                <p>Vietnam (remote-friendly)</p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="180">
-                            <div class="skill-item">
-                                <i class="bi bi-envelope"></i>
-                                <h3>Email</h3>
-                                <p><a href="mailto:ph2o.phuong@gmail.com">ph2o.phuong@gmail.com</a></p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                            <div class="skill-item">
-                                <i class="bi bi-linkedin"></i>
-                                <h3>LinkedIn</h3>
-                                <p><a href="https://www.linkedin.com/in/aquamarine3236/"
-                                        target="_blank">aquamarine3236</a></p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                            <div class="skill-item">
-                                <i class="bi bi-github"></i>
-                                <h3>GitHub</h3>
-                                <p><a href="https://github.com/aquamanine3236" target="_blank">aquamanine3236</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quote -->
-                <blockquote class="personal-quote" data-aos="fade-down" data-aos-delay="200">
-                    <p>"Building practical solutions through code while continuously learning and growing."</p>
-                </blockquote>
-            </div>
-        </section><!-- /About Section -->
-
-        <!-- Skills Section (MinimalFolio style with Portfolio content) -->
-        <section id="skills" class="skills section">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Skills</h2>
-                <p>Technical skills and technologies I work with regularly</p>
-            </div>
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row gy-4">
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
-                        <article class="skill-block skills-animation">
-                            <header class="d-flex align-items-center justify-content-between mb-2">
-                                <h3 class="skill-title">Python</h3>
-                                <span class="skill-badge">Intermediate</span>
-                            </header>
-                            <p class="skill-desc">Backend development, data processing, automation scripts, and AI/ML
-                                prototyping.</p>
-                        </article>
-                    </div>
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <article class="skill-block skills-animation">
-                            <header class="d-flex align-items-center justify-content-between mb-2">
-                                <h3 class="skill-title">SQL</h3>
-                                <span class="skill-badge">Intermediate</span>
-                            </header>
-                            <p class="skill-desc">Database design, complex queries, and data management with PostgreSQL
-                                and MySQL.</p>
-                        </article>
-                    </div>
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="250">
-                        <article class="skill-block skills-animation">
-                            <header class="d-flex align-items-center justify-content-between mb-2">
-                                <h3 class="skill-title">Django</h3>
-                                <span class="skill-badge">Intermediate</span>
-                            </header>
-                            <p class="skill-desc">Full-stack web applications with REST APIs, authentication, and admin
-                                interfaces.</p>
-                        </article>
-                    </div>
-                </div>
-
-                <div class="row gy-4 mt-1">
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
-                        <article class="skill-block skills-animation">
-                            <header class="d-flex align-items-center justify-content-between mb-2">
-                                <h3 class="skill-title">FastAPI</h3>
-                                <span class="skill-badge">Basic</span>
-                            </header>
-                            <p class="skill-desc">High-performance async APIs with automatic documentation and type
-                                validation.</p>
-                        </article>
-                    </div>
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <article class="skill-block skills-animation">
-                            <header class="d-flex align-items-center justify-content-between mb-2">
-                                <h3 class="skill-title">ReactJS</h3>
-                                <span class="skill-badge">Basic</span>
-                            </header>
-                            <p class="skill-desc">Component-based UI development with hooks and state management.</p>
-                        </article>
-                    </div>
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="250">
-                        <article class="skill-block skills-animation">
-                            <header class="d-flex align-items-center justify-content-between mb-2">
-                                <h3 class="skill-title">AWS</h3>
-                                <span class="skill-badge">Basic</span>
-                            </header>
-                            <p class="skill-desc">Cloud services including EC2, S3, Lambda, and deployment workflows.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-
-                <!-- Toolbox Section -->
-                <div class="row gx-5 gy-4 mt-5 align-items-center alt-grid">
-                    <div class="col-lg-5 order-lg-2" data-aos="fade-left" data-aos-delay="150">
-                        <div class="soft-card p-4 rounded-2">
-                            <h4 class="mini-head mb-3">Toolbox</h4>
-                            <ul class="list-unstyled tool-list mb-0">
-                                <li class="d-flex align-items-center gap-2"><i class="bi bi-check2"></i><span>.NET,
-                                        JavaScript, HTML/CSS</span></li>
-                                <li class="d-flex align-items-center gap-2"><i class="bi bi-check2"></i><span>Angular,
-                                        Flask, Bootstrap</span></li>
-                                <li class="d-flex align-items-center gap-2"><i class="bi bi-check2"></i><span>Git,
-                                        Docker, Qdrant</span></li>
-                                <li class="d-flex align-items-center gap-2"><i
-                                        class="bi bi-check2"></i><span>Scikit-learn, PyTorch</span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-                        <div class="note">
-                            <p class="mb-0">I'm constantly exploring new tools and technologies to expand my skillset.
-                                My focus is on building practical solutions using modern frameworks and cloud services
-                                while following best practices in software development.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- /Skills Section -->
-
-        <!-- Career Section -->
-        <section id="career" class="career section light-background">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Career</h2>
-                <p>My professional experience and educational background</p>
-            </div>
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ul class="nav nav-pills career-navigation justify-content-center" id="career-tabs"
-                            role="tablist" data-aos="fade-up" data-aos-delay="200">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="experience-tab" data-bs-toggle="pill"
-                                    data-bs-target="#experience" type="button" role="tab" aria-controls="experience"
-                                    aria-selected="true">
-                                    <span class="nav-number">01</span>
-                                    <span class="nav-label">Experience</span>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="education-tab" data-bs-toggle="pill"
-                                    data-bs-target="#education" type="button" role="tab" aria-controls="education"
-                                    aria-selected="false">
-                                    <span class="nav-number">02</span>
-                                    <span class="nav-label">Education</span>
-                                </button>
-                            </li>
-                            <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="publication-tab" data-bs-toggle="pill"
-                                    data-bs-target="#publication" type="button" role="tab"
-                                    aria-controls="publication" aria-selected="false">
-                                    <span class="nav-number">03</span>
-                                    <span class="nav-label">Publication</span>
-                                </button>
-                            </li> -->
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="tab-content career-content" id="career-tabContent">
-                    <!-- Experience Tab -->
-                    <div class="tab-pane fade show active" id="experience" role="tabpanel"
-                        aria-labelledby="experience-tab" tabindex="0" data-aos="fade-up" data-aos-delay="300">
-                        <div class="section-intro">
-                            <h2>Work Experience</h2>
-                            <p>Professional experience and companies I've worked with.</p>
-                        </div>
-
-                        <div class="education-list">
-                            <div class="education-entry" data-aos="fade-up" data-aos-delay="400">
-                                <div class="degree-year">Sep 2025 –<br>Nov 2025</div>
-                                <div class="degree-details">
-                                    <h3>Software Engineer Internship</h3>
-                                    <div class="institution">TISOHA Software Solutions — Ho Chi Minh City, Vietnam</div>
-                                    <ul>
-                                        <li>Assisted in the development of software solutions using .NET.</li>
-                                        <li>Collaborated with the engineering team to research about Medusa.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="education-entry" data-aos="fade-up" data-aos-delay="450">
-                                <div class="degree-year">Dec 2025 –<br>Jan 2026</div>
-                                <div class="degree-details">
-                                    <h3>Python Development Internship</h3>
-                                    <div class="institution">AU-AVAGO CO., LTD — Ho Chi Minh City, Vietnam</div>
-                                    <ul>
-                                        <li>Developed an automated tool to crawl data, establish connections, and send
-                                            messages on LinkedIn.</li>
-                                        <li>Developed an automated tool to crawl data, establish connections, and send
-                                            messages on X/Twitter.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Education Tab -->
-                    <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="education-tab"
-                        tabindex="0" data-aos="fade-up" data-aos-delay="300">
-                        <div class="section-intro">
-                            <h2>Educational Background</h2>
-                            <p>My academic journey in Artificial Intelligence and software engineering.</p>
-                        </div>
-
-                        <div class="education-list">
-                            <div class="education-entry" data-aos="fade-up" data-aos-delay="400">
-                                <div class="degree-year">2023 - Present</div>
-                                <div class="degree-details">
-                                    <h3>Artificial Intelligence Major</h3>
-                                    <div class="institution">University of Information Technology</div>
-                                    <p>Coursework centers on machine learning, data science, and modern software
-                                        engineering practices.</p>
-                                </div>
-                            </div>
-
-                            <div class="education-entry" data-aos="fade-up" data-aos-delay="450">
-                                <div class="degree-year">Ongoing</div>
-                                <div class="degree-details">
-                                    <h3>Self-paced Engineering Practice</h3>
-                                    <div class="institution">Personal Projects & Open-source Exploration</div>
-                                    <p>Constantly exploring new tools, frameworks, and deployment workflows to
-                                        strengthen end-to-end delivery.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-        </section><!-- /Career Section -->
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects section">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Projects</h2>
-                <p>Recent projects that blend web development with AI exploration</p>
-            </div>
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
-
-                    <div class="projects-filters-wrapper" data-aos="fade-up" data-aos-delay="100">
-                        <ul class="projects-filters isotope-filters">
-                            <li data-filter="*" class="filter-active">All Projects</li>
-                            <li data-filter=".filter-web">Web</li>
-                            <li data-filter=".filter-ai">AI/ML</li>
-                        </ul>
-                    </div>
-
-                    <div class="row gy-4 projects-grid isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-                        <div class="col-lg-4 col-md-6 projects-item isotope-item filter-ai filter-ai">
-                            <div class="projects-card">
-                                <div class="image-container">
-                                    <img src="assets/images/projects/project-1.png" class="img-fluid"
-                                        alt="Text Analysis Tool" loading="lazy">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="assets/images/projects/project-1.png" class="glightbox zoom-link"
-                                                data-glightbox="title: Text Analysis Tool; description: Multilingual text analysis platform supporting English and Vietnamese with summarization and sentiment classification. Features .doc and .pdf upload support.">
-                                                <i class="bi bi-zoom-in"></i>
-                                            </a>
-                                            <a href="https://github.com/aquamanine3236/TextAnalysis"
-                                                class="details-link" title="View on GitHub" target="_blank">
-                                                <i class="bi bi-github"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h3>Text Analysis Tool</h3>
-                                    <span class="tech-stack">Django, ReactJS</span>
-                                </div>
-                            </div>
-                        </div><!-- End Projects Item -->
-
-                        <div class="col-lg-4 col-md-6 projects-item isotope-item filter-ai">
-                            <div class="projects-card">
-                                <div class="image-container">
-                                    <img src="assets/images/projects/project-2.png" class="img-fluid"
-                                        alt="TiepLM AI Assistant" loading="lazy">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="assets/images/projects/project-2.png" class="glightbox zoom-link"
-                                                data-glightbox="title: TiepLM AI Assistant; description: NotebookLM-like assistant for Deep Learning courses with hierarchical summarization, Q&A with citations, and RAG pipeline using hybrid search.">
-                                                <i class="bi bi-zoom-in"></i>
-                                            </a>
-                                            <a href="https://github.com/aquamanine3236/cs431-assistant-tieplm"
-                                                class="details-link" title="View on GitHub" target="_blank">
-                                                <i class="bi bi-github"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h3>TiepLM AI Assistant</h3>
-                                    <span class="tech-stack">RAG, FastAPI, Qdrant, React</span>
-                                </div>
-                            </div>
-                        </div><!-- End Projects Item -->
-
-                        <div class="col-lg-4 col-md-6 projects-item isotope-item filter-web">
-                            <div class="projects-card">
-                                <div class="image-container">
-                                    <img src="assets/images/projects/project-3.png" class="img-fluid" alt="RoamViet"
-                                        loading="lazy">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="assets/images/projects/project-3.png" class="glightbox zoom-link"
-                                                data-glightbox="title: RoamViet; description: Interactive tourism website for Vietnam travelers with personalized itinerary creation and real-time Firebase Firestore integration.">
-                                                <i class="bi bi-zoom-in"></i>
-                                            </a>
-                                            <a href="https://github.com/aquamanine3236/RoamViet" class="details-link"
-                                                title="View on GitHub" target="_blank">
-                                                <i class="bi bi-github"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h3>RoamViet</h3>
-                                    <span class="tech-stack">FastAPI, Firebase</span>
-                                </div>
-                            </div>
-                        </div><!-- End Projects Item -->
-
-                    </div><!-- End Portfolio Grid -->
-                </div>
-            </div>
-        </section><!-- /Projects Section -->
-
-        <!-- Certificates Section -->
-        <section id="certificates" class="services section light-background">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Certificates</h2>
-                <p>Language proficiency and cloud/AI foundations</p>
-            </div>
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row service-grid">
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="bi bi-translate"></i>
-                            </div>
-                            <h3><a href="assets/images/certificates/IELTS.png" class="glightbox"
-                                    data-gallery="certificates">IELTS 7.5</a></h3>
-                            <p>English proficiency certified in 2025.</p>
-                            <div class="service-link">
-                                <a href="assets/images/certificates/IELTS.png" class="glightbox"
-                                    data-gallery="certificates">
-                                    <span>View Certificate</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="bi bi-cloud"></i>
-                            </div>
-                            <h3><a href="assets/docs/certificates/AWS Cloud.pdf" target="_blank">AWS Cloud
-                                    Practitioner</a>
-                            </h3>
-                            <p>Foundational cloud concepts and AWS services.</p>
-                            <div class="service-link">
-                                <a href="assets/docs/certificates/AWS Cloud.pdf" target="_blank">
-                                    <span>View Certificate</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="bi bi-cpu"></i>
-                            </div>
-                            <h3><a href="assets/docs/certificates/AWS AI Practitioner.pdf" target="_blank">AWS AI
-                                    Practitioner</a></h3>
-                            <p>AI/ML services and responsible AI practices.</p>
-                            <div class="service-link">
-                                <a href="assets/docs/certificates/AWS AI Practitioner.pdf" target="_blank">
-                                    <span>View Certificate</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="bi bi-stars"></i>
-                            </div>
-                            <h3><a href="assets/docs/certificates/AWS Generative AI.pdf" target="_blank">AWS Generative
-                                    AI</a></h3>
-                            <p>Generative AI capabilities and applied patterns.</p>
-                            <div class="service-link">
-                                <a href="assets/docs/certificates/AWS Generative AI.pdf" target="_blank">
-                                    <span>View Certificate</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="bi bi-code-slash"></i>
-                            </div>
-                            <h3><a href="assets/docs/certificates/AWS Prompt Engineering.pdf" target="_blank">AWS Prompt
-                                    Engineering</a></h3>
-                            <p>Prompt design patterns for LLM outputs.</p>
-                            <div class="service-link">
-                                <a href="assets/docs/certificates/AWS Prompt Engineering.pdf" target="_blank">
-                                    <span>View Certificate</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section><!-- /Certificates Section -->
-
-        <!-- Contact Section (MinimalFolio style) -->
-        <section id="contact" class="contact section">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Contact</h2>
-                <p>Reach out for collaboration, opportunities, or just to say hello</p>
-            </div>
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row align-items-stretch">
-                    <div class="col-lg-7 order-lg-1 order-2" data-aos="fade-right" data-aos-delay="200">
-                        <div class="contact-form-container">
-                            <div class="form-intro">
-                                <h2>Let's Connect</h2>
-                                <p>Feel free to reach out if you'd like to collaborate on a project or discuss
-                                    opportunities.</p>
-                            </div>
-
-                            <form action="forms/contact.php" method="post" class="php-email-form contact-form">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-field">
-                                            <input type="text" name="name" class="form-input" id="userName"
-                                                placeholder="Your Name" required="">
-                                            <label for="userName" class="field-label">Name</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="form-field">
-                                            <input type="email" class="form-input" name="email" id="userEmail"
-                                                placeholder="Your Email" required="">
-                                            <label for="userEmail" class="field-label">Email</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-field">
-                                    <input type="text" class="form-input" name="subject" id="messageSubject"
-                                        placeholder="Subject" required="">
-                                    <label for="messageSubject" class="field-label">Subject</label>
-                                </div>
-
-                                <div class="form-field message-field">
-                                    <textarea class="form-input message-input" name="message" id="userMessage" rows="5"
-                                        placeholder="Your message" required=""></textarea>
-                                    <label for="userMessage" class="field-label">Message</label>
-                                </div>
-
-                                <div class="my-3">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                                </div>
-
-                                <button type="submit" class="send-button">
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 order-lg-2 order-1">
-                        <div class="contact-sidebar">
-                            <div class="contact-header">
-                                <h3>Get in Touch</h3>
-                                <p>I'm open to collaboration and new opportunities.</p>
-                            </div>
-
-                            <div class="contact-methods">
-                                <div class="contact-method">
-                                    <div class="contact-icon">
-                                        <i class="bi bi-geo-alt"></i>
-                                    </div>
-                                    <div class="contact-details">
-                                        <span class="method-label">Location</span>
-                                        <p>Vietnam (remote-friendly)</p>
-                                    </div>
-                                </div>
-
-                                <div class="contact-method">
-                                    <div class="contact-icon">
-                                        <i class="bi bi-envelope"></i>
-                                    </div>
-                                    <div class="contact-details">
-                                        <span class="method-label">Email</span>
-                                        <p><a href="mailto:ph2o.phuong@gmail.com">ph2o.phuong@gmail.com</a></p>
-                                    </div>
-                                </div>
-
-                                <div class="contact-method">
-                                    <div class="contact-icon">
-                                        <i class="bi bi-linkedin"></i>
-                                    </div>
-                                    <div class="contact-details">
-                                        <span class="method-label">LinkedIn</span>
-                                        <p><a href="https://www.linkedin.com/in/aquamarine3236/"
-                                                target="_blank">aquamarine3236</a></p>
-                                    </div>
-                                </div>
-
-                                <div class="contact-method">
-                                    <div class="contact-icon">
-                                        <i class="bi bi-github"></i>
-                                    </div>
-                                    <div class="contact-details">
-                                        <span class="method-label">GitHub</span>
-                                        <p><a href="https://github.com/aquamanine3236"
-                                                target="_blank">aquamanine3236</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="connect-section">
-                                <span class="connect-label">Connect with me</span>
-                                <div class="social-links">
-                                    <a href="https://www.linkedin.com/in/ph%C6%B0%C6%A1ng-phan-th%E1%BB%A7y-059762364/"
-                                        class="social-link" target="_blank">
-                                        <i class="bi bi-linkedin"></i>
-                                    </a>
-                                    <a href="https://github.com/aquamanine3236" class="social-link" target="_blank">
-                                        <i class="bi bi-github"></i>
-                                    </a>
-                                    <a href="mailto:ph2o.phuong@gmail.com" class="social-link">
-                                        <i class="bi bi-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- /Contact Section -->
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title">Certificates</h2>
+
+      <div style="margin-bottom: 2rem;">
+        <h3
+          style="font-size: 0.85rem; font-weight: 600; color: var(--accent-text); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;">
+          Cloud &amp; Infrastructure</h3>
+        <div class="certs-grid">
+          <a href="assets/docs/certificates/AWS Cloud.pdf" target="_blank" rel="noopener" class="cert-card"
+            aria-label="AWS Cloud Practitioner certificate">
+            <div class="cert-name">AWS Cloud Practitioner</div>
+            <div class="cert-desc">Foundational AWS services &amp; concepts.</div>
+          </a>
+          <a href="assets/docs/certificates/AWS AI Practitioner.pdf" target="_blank" rel="noopener" class="cert-card"
+            aria-label="AWS AI Practitioner certificate">
+            <div class="cert-name">AWS AI Practitioner</div>
+            <div class="cert-desc">AWS AI/ML and responsible AI practices.</div>
+          </a>
+          <a href="assets/docs/certificates/AWS Generative AI.pdf" target="_blank" rel="noopener" class="cert-card"
+            aria-label="AWS Generative AI certificate">
+            <div class="cert-name">AWS Generative AI</div>
+            <div class="cert-desc">Applied generative AI patterns.</div>
+          </a>
+          <a href="assets/docs/certificates/AWS Prompt Engineering.pdf" target="_blank" rel="noopener" class="cert-card"
+            aria-label="AWS Prompt Engineering certificate">
+            <div class="cert-name">AWS Prompt Engineering</div>
+            <div class="cert-desc">Advanced LLM optimization techniques.</div>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3
+          style="font-size: 0.85rem; font-weight: 600; color: var(--accent-text); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;">
+          Language &amp; Communication</h3>
+        <div class="certs-grid">
+          <a href="assets/docs/certificates/IELTS.png" target="_blank" rel="noopener" class="cert-card"
+            aria-label="IELTS English proficiency certificate">
+            <div class="cert-name">IELTS 7.5</div>
+            <div class="cert-desc">Professional-level English proficiency.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Skills -->
+    <section id="skills" class="fade-up">
+      <div class="section-label">03 &mdash; Skills</div>
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-desc">Core competencies across backend, frontend, AI, and cloud infrastructure</p>
+
+      <div class="skills-main">
+        <div class="skill-card">
+          <div class="skill-header"><span class="skill-name">Python</span><span class="skill-level">Intermediate</span>
+          </div>
+          <p class="skill-desc">Versatile backend development, automation workflows, data processing pipelines, and
+            machine learning prototyping. Production-ready code with emphasis on clean architecture and maintainability.
+          </p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header"><span class="skill-name">Django &amp; FastAPI</span><span
+              class="skill-level">Intermediate</span></div>
+          <p class="skill-desc">Full-stack web applications with Django; high-performance async APIs with FastAPI. REST
+            architecture, database modeling, authentication systems, and deployment pipelines.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header"><span class="skill-name">Databases &amp; Data</span><span
+              class="skill-level">Intermediate</span></div>
+          <p class="skill-desc">SQL expertise with PostgreSQL and MySQL; complex query optimization, schema design, and
+            data integrity. Vector databases (Qdrant) for semantic search and RAG pipelines.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header"><span class="skill-name">Frontend &amp; UI</span><span
+              class="skill-level">Basic</span></div>
+          <p class="skill-desc">ReactJS component architecture with hooks and state management. Responsive HTML/CSS,
+            Bootstrap integration, and modern JavaScript for interactive user experiences.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header"><span class="skill-name">Cloud &amp; DevOps</span><span
+              class="skill-level">Basic</span></div>
+          <p class="skill-desc">AWS services (EC2, S3, Lambda, RDS) for scalable infrastructure. Docker
+            containerization, deployment automation, and cloud-native application design.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header"><span class="skill-name">AI &amp; Machine Learning</span><span
+              class="skill-level">Intermediate</span></div>
+          <p class="skill-desc">Machine learning workflows with PyTorch, Scikit-learn, and transformers.
+            Retrieval-Augmented Generation (RAG) systems, embeddings, and production ML pipeline design.</p>
+        </div>
+      </div>
+
+      <p class="toolbox-title">Also in my toolbox</p>
+      <div class="toolbox-grid">
+        <span class="tool-pill">.NET / C#</span>
+        <span class="tool-pill">JavaScript</span>
+        <span class="tool-pill">TypeScript</span>
+        <span class="tool-pill">Angular</span>
+        <span class="tool-pill">Flask</span>
+        <span class="tool-pill">Git & GitHub</span>
+        <span class="tool-pill">Docker</span>
+        <span class="tool-pill">Medusa Framework</span>
+        <span class="tool-pill">Numpy & Pandas</span>
+        <span class="tool-pill">Transformers</span>
+        <span class="tool-pill">Linux & Bash</span>
+      </div>
+    </section>
+
+    <!-- 05 Experience -->
+    <section id="experience" class="fade-up">
+      <div class="section-label">04 &mdash; Experience</div>
+      <h2 class="section-title">Career</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jan 2026 – March 2026</div>
+          <div class="timeline-title">TPS Thanh Phong</div>
+          <div class="timeline-subtitle">IT Internship</div>
+          <div class="timeline-content">
+            <ul class="exp-bullets">
+              <li>Apply artificial intelligence (AI) to office operations to enhance efficiency, automate workflows, and
+                improve data management and reporting.</li>
+              <li>Provide AI training and capacity-building support for officials at the Binh Hung Commune People’s
+                Committee.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Dec 2025 – Jan 2026</div>
+          <div class="timeline-title">AU-AVAGO CO., LTD</div>
+          <div class="timeline-subtitle">Python Development Internship</div>
+          <div class="timeline-content">
+            <ul class="exp-bullets">
+              <li>Automated data crawling, account management, and messaging on LinkedIn and X, processing thousands of
+                entries with 95%+ accuracy.</li>
+              <li>Implemented robust error handling, rate limiting, and logging for reliable production operation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Sep 2025 – Nov 2025</div>
+          <div class="timeline-title">TISOHA Software Solutions</div>
+          <div class="timeline-subtitle">Software Engineer Internship</div>
+          <div class="timeline-content">
+            <ul class="exp-bullets">
+              <li>Developed full-stack features using .NET, adhering to enterprise architecture and modern practices.
+              </li>
+              <li>Researched Medusa commerce framework and documented findings for team adoption decisions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Projects -->
+    <section id="projects" class="fade-up">
+      <div class="section-label">05 &mdash; Projects</div>
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-desc">Recent projects showcasing full-stack development and AI integration</p>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-name">Text Analysis Tool</div>
+          <p class="project-desc">Multilingual NLP platform with summarization and sentiment analysis.</p>
+          <div class="project-tags">
+            <span class="project-tag">Django</span>
+            <span class="project-tag">ReactJS</span>
+            <span class="project-tag">NLP</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/aquamarine3236/TextAnalysis" target="_blank" rel="noopener" class="project-link"
+              aria-label="View TextAnalysis on GitHub">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
+              </svg>
+              View on GitHub
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-name">TiepLM AI Assistant</div>
+          <p class="project-desc">RAG-powered AI assistant for Deep Learning education with context-aware Q&amp;A and
+            hybrid search.</p>
+          <div class="project-tags">
+            <span class="project-tag">RAG</span>
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">Qdrant</span>
+            <span class="project-tag">React</span>
+            <span class="project-tag">LLM</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/aquamarine3236/cs431-assistant-tieplm" target="_blank" rel="noopener"
+              class="project-link" aria-label="View TiepLM on GitHub">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
+              </svg>
+              View on GitHub
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-name">RoamViet</div>
+          <p class="project-desc">Interactive tourism planner for Vietnam featuring collaborative real-time trip
+            synchronization.</p>
+          <div class="project-tags">
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">Firebase</span>
+            <span class="project-tag">Realtime</span>
+            <span class="project-tag">UX</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/aquamarine3236/RoamViet" target="_blank" rel="noopener" class="project-link"
+              aria-label="View RoamViet on GitHub">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
+              </svg>
+              View on GitHub
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-name">Attendance Tracking System</div>
+          <p class="project-desc">A full-stack attendance tracking system that supports direct check-in/out with GPS and
+            Wi-Fi validation, featuring a real-time admin dashboard powered by WebSockets.</p>
+          <div class="project-tags">
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">WebSocket</span>
+            <span class="project-tag">Flutter</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/aquamarine3236/attendance-tracking-app" target="_blank" rel="noopener"
+              class="project-link" aria-label="View TextAnalysis on GitHub">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
+              </svg>
+              View on GitHub
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 08 Contact -->
+    <section id="contact" class="fade-up">
+      <div class="section-label">06 &mdash; Contact</div>
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-desc">Reach out for collaboration, opportunities, or just to say hello.</p>
+
+      <!-- Contact Info Icons — Centered Row -->
+      <div class="contact-icons-row">
+        <a href="mailto:ph2o.phuong@gmail.com" class="contact-icon-btn" id="contact-icon-email" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/aquamarine3236" target="_blank" rel="noopener" class="contact-icon-btn"
+          id="contact-icon-linkedin" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="https://github.com/aquamarine3236" target="_blank" rel="noopener" class="contact-icon-btn"
+          id="contact-icon-github" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+            <path d="M9 18c-4.51 2-5-2-7-2" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Contact Form — Full Width -->
+      <form class="contact-form" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Name</label>
+            <input class="form-input" type="text" id="contact-name" name="from_name" placeholder="Your name" required
+              autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email</label>
+            <input class="form-input" type="email" id="contact-email" name="from_email" placeholder="your@email.com"
+              required autocomplete="email" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="contact-subject">Subject</label>
+          <input class="form-input" type="text" id="contact-subject" name="subject" placeholder="What's this about?"
+            required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="contact-message">Message</label>
+          <textarea class="form-textarea" id="contact-message" name="message"
+            placeholder="Tell me what you have in mind..." required></textarea>
+        </div>
+        <div class="contact-form-footer">
+          <button type="submit" class="btn-primary" id="contact-submit" style="width:fit-content;">
+            <svg class="send-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m22 2-7 20-4-9-9-4Z" />
+              <path d="M22 2 11 13" />
+            </svg>
+            <span class="btn-text">Send Message</span>
+            <svg class="success-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+          <div class="contact-status" id="contact-status" aria-live="polite"></div>
+        </div>
+      </form>
+
+    </section>
 
     </main>
+  </div>
 
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="copyright text-center">
-                <p>&copy; <span>Copyright</span> <strong class="px-1 sitename">Phan Thuy Phuong</strong> <span>All
-                        Rights
-                        Reserved</span></p>
-            </div>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p class="footer-copy">© 2025 Phan Thuy Phuong &mdash; All Rights Reserved</p>
+    <p class="footer-built">Built with <span>HTML · CSS · JS</span></p>
+  </footer>
 
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Preloader -->
-    <div id="preloader">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="assets/js/neural-network.js"></script>
+  <script src="assets/js/contact.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
