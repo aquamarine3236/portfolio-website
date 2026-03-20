@@ -30,6 +30,46 @@ themeToggle.addEventListener('click', () => {
 function goTo(id) {
   const el = document.getElementById(id);
   if (el) el.scrollIntoView({ behavior: 'smooth' });
+  closeMobileMenu();
+}
+
+/* ── Hamburger Menu ── */
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const headerNav = document.getElementById('headerNav');
+
+function closeMobileMenu() {
+  if (!hamburgerBtn || !headerNav) return;
+  hamburgerBtn.classList.remove('active');
+  headerNav.classList.remove('open');
+  hamburgerBtn.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('menu-open');
+}
+
+if (hamburgerBtn && headerNav) {
+  hamburgerBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = hamburgerBtn.classList.toggle('active');
+    headerNav.classList.toggle('open');
+    hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('menu-open', isOpen);
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hamburgerBtn.contains(e.target) && !headerNav.contains(e.target)) {
+      closeMobileMenu();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMobileMenu();
+  });
+
+  // Close on window resize past mobile breakpoint
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) closeMobileMenu();
+  });
 }
 
 /* ── Scroll Spy ── */

@@ -30,7 +30,13 @@
       <a href="#" class="header-name" onclick="goTo('hero'); return false;"
         style="text-decoration: none; color: inherit;">Phuong</a>
 
-      <nav class="header-nav">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <nav class="header-nav" id="headerNav">
         <button class="nav-link" data-section="about" onclick="goTo('about')">About</button>
         <button class="nav-link" data-section="education" onclick="goTo('education')">Background</button>
         <button class="nav-link" data-section="skills" onclick="goTo('skills')">Skills</button>
