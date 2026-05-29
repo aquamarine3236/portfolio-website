@@ -956,6 +956,10 @@ section {
   gap: var(--space-sm);
 }
 
+.certs-grid > div {
+  margin-bottom: 2rem;
+}
+
 .cert-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
